@@ -1,0 +1,32 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-03-02T14:20:14.709Z",
+  "summary": "The diff modifies frontend/src/components/Pricing.tsx to remove all price values, currency symbols, and numeric amounts, keeping only service category headers and service names. The file summary confirms Services.tsx, Hero.tsx, Footer.tsx, Navigation.tsx, BookingContact.tsx, FloatingActionButtons.tsx show no price amounts. REQ-30 appears fully implemented. REQ-31 relies on the file summaries for the other components, which describe no pricing figures, but the diff itself only shows direct changes to Pricing.tsx — no explicit diff evidence for the other components being audited and modified.",
+  "missing_requirements": [
+    {
+      "id": "REQ-31",
+      "requirement": "Audit all other frontend components (Services.tsx, BookingContact.tsx, Hero.tsx, Footer.tsx, Navigation.tsx, MapSection.tsx, FloatingActionButtons.tsx, and any other component) for any remaining price amounts, dollar signs, or 'From $...' text and remove them.",
+      "reason": "The diff only shows changes to Pricing.tsx. No diff evidence shows that Services.tsx, BookingContact.tsx, Hero.tsx, Footer.tsx, Navigation.tsx, MapSection.tsx, or FloatingActionButtons.tsx were actually modified to remove price text. The file summaries describe these components but do not confirm price removal edits were made.",
+      "evidence": [
+        "frontend/src/components/Pricing.tsx",
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "A subtitle paragraph was added directing customers to 'visit us or get in touch for personalized pricing', and a footer note '* Please contact us for...' was added to the Pricing section.",
+      "reason": "The build request explicitly states as a non-goal: 'Adding any new pricing-related UI (e.g. Price on request labels or Contact us for pricing badges) unless it replaces a removed price inline — keep it clean with names only.' These new text elements were not requested and go beyond simply removing prices.",
+      "evidence": [
+        "frontend/src/components/Pricing.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/Pricing.tsx",
+    "project_state.json"
+  ]
+}

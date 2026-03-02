@@ -1,0 +1,65 @@
+{
+  "kind": "build_request",
+  "title": "Remove all price amounts from the website",
+  "projectName": "Imagine Unisex Salon",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-30",
+      "text": "In frontend/src/components/Pricing.tsx, remove all price values from every service item — this includes all currency symbols (e.g. '$', '₹'), numeric amounts (e.g. $85, $110, $145), and any 'From $...' or 'Starting at $...' text. Keep only service category headers and service names. The section layout and styling must remain fully intact.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Please remove all price amounts from the website completely.",
+          "Remove: All dollar amounts ($85, $110, $145, etc.) Any price numbers from services Any \"From $...\" text",
+          "Keep only the service names, without showing any prices."
+        ]
+      },
+      "acceptanceCriteria": [
+        "No dollar signs ($), rupee symbols (₹), or any other currency symbols appear anywhere on the page.",
+        "No numeric price values (e.g. 85, 110, 145) appear in the Pricing section.",
+        "No 'From $...', 'Starting at $...', or any price-prefixed strings are rendered.",
+        "Service category headers (e.g. Haircuts, Color, Nails) remain visible.",
+        "Service names (e.g. Single Process Color, Partial Highlights, Full Highlights) remain visible.",
+        "The Pricing section layout (grid, cards, category headers, list structure) is visually unchanged apart from the removed price values."
+      ]
+    },
+    {
+      "id": "REQ-31",
+      "text": "Audit all other frontend components (Services.tsx, BookingContact.tsx, Hero.tsx, Footer.tsx, Navigation.tsx, MapSection.tsx, FloatingActionButtons.tsx, and any other component) for any remaining price amounts, dollar signs, or 'From $...' text and remove them. Only service names and descriptions should remain.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Remove: All dollar amounts ($85, $110, $145, etc.) Any price numbers from services Any \"From $...\" text",
+          "Keep only the service names, without showing any prices."
+        ]
+      },
+      "acceptanceCriteria": [
+        "A full-page scan reveals zero instances of '$', '₹', or any price numeral tied to a service across all rendered components.",
+        "Services.tsx cards show only icon, service name, and description — no price figures.",
+        "No other section or component displays any monetary value."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not remove or restructure the Pricing section itself — only strip monetary values from it.",
+    "Do not alter any section layout, card styling, or typography beyond removing price text.",
+    "Do not modify backend/main.mo.",
+    "Do not modify any file listed under frontend.immutablePaths."
+  ],
+  "nonGoals": [
+    "Adding any new pricing-related UI (e.g. 'Price on request' labels or 'Contact us for pricing' badges) unless it replaces a removed price inline — keep it clean with names only.",
+    "Changing the booking form, gallery, testimonials, admin dashboard, or any non-pricing section.",
+    "Any backend changes."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

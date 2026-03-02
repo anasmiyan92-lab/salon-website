@@ -1,0 +1,25 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-in-frontend-src-components-pricing-tsx-remove-all-price-values-from-every-service-item-this-includes-all-currency-symbols-e-g-numeric-amounts-e-g-85-110-145-and-any-from-or-starting-at-text-keep-only-service-category-headers-and-service-names-the-section-layout-and-styling-must-remain-fully-intact",
+      "featureTitle": "In frontend/src/components/Pricing.tsx, remove all price values from every service item — this includes all currency symbols (e.g. '$', '₹'), numeric amounts (e.g. $85, $110, $145), and any 'From $...' or 'Starting at $...' text. Keep only service category headers and service names. The section layout and styling must remain fully intact.",
+      "files": [
+        "frontend/src/components/Pricing.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
+      ],
+      "testIds": [
+        "REQ-30"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

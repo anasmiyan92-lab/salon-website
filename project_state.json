@@ -1,0 +1,368 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 11,
+  "summary": "Ultra-premium luxury salon website for Imagine Unisex Salon (Rudrapur, Uttarakhand). Features cinematic loading screen, full-screen hero slideshow, services section (Haircut, Beard Styling, Hair Styling, Facial, Hair Coloring, Keratin Treatment, Makeup), premium portfolio gallery with lightbox, Instagram-style gallery grid, testimonials carousel, booking form with backend storage, admin dashboard for booking management, Google Maps embed, dark/light mode toggle, scroll animations, floating contact buttons (WhatsApp/Call/Instagram), and responsive design. Pricing section shows service names only — no prices displayed (salon provides pricing in person). Contact: +91 96904 17361, Instagram: instagram.com/imagine_unisexsalon.",
+  "architectural_notes": [
+    "Styled with Tailwind CSS for a clean, modern look",
+    "Google Maps embedded via iframe (no API key); links open exact salon location in Google Maps",
+    "No before/after slider section per user request",
+    "Phone/WhatsApp: +91 96904 17361 (wa.me/919690417361) — updated from original number",
+    "Instagram: https://www.instagram.com/imagine_unisexsalon (updated handle)",
+    "No online payment features; Pricing section (service price list) is retained but all payment/checkout flows are removed",
+    "Pricing section shows service names only — all price amounts removed; salon provides pricing in person"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-visually-striking-hero-section-with-the-salon-name-a-tagline-and-a-prominent-call-to-action-button-e-g-book-an-appointment-apply-a-warm-elegant-visual-theme-using-rich-neutrals-cream-warm-whites-deep-charcoal-and-gold-accents-with-sophisticated-typography-serif-headings-clean-sans-serif-body-text-that-feels-luxurious-and-modern-throughout-the-entire-site",
+      "title": "Create a visually striking hero section with the salon name, a tagline, and a prominent call-to-action button (e.g., 'Book an Appointment'). Apply a warm, elegant visual theme using rich neutrals (cream, warm whites, deep charcoal, and gold accents) with sophisticated typography (serif headings, clean sans-serif body text) that feels luxurious and modern throughout the entire site.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-services-section-that-showcases-the-salon-s-main-service-categories-e-g-haircuts-coloring-styling-treatments-nails-spa-display-each-service-as-a-card-with-an-icon-service-name-and-short-description-layout-should-be-a-responsive-grid",
+      "title": "Build a Services section that showcases the salon's main service categories (e.g., Haircuts, Coloring, Styling, Treatments, Nails, Spa). Display each service as a card with an icon, service name, and short description. Layout should be a responsive grid.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-pricing-section-listing-service-prices-organized-by-category-each-category-should-have-a-clearly-labeled-header-and-a-list-of-services-with-their-corresponding-prices-the-layout-should-be-clean-and-easy-to-scan",
+      "title": "Build a Pricing section listing service prices organized by category. Each category should have a clearly labeled header and a list of services with their corresponding prices. The layout should be clean and easy to scan.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-gallery-section-displaying-a-grid-layout-of-salon-work-photos-using-the-generated-static-assets-images-should-be-displayed-with-a-subtle-hover-effect-slight-zoom-or-overlay",
+      "title": "Build a Gallery section displaying a grid layout of salon work photos using the generated static assets. Images should be displayed with a subtle hover effect (slight zoom or overlay).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-booking-contact-section-with-a-form-that-collects-the-client-s-name-email-phone-number-preferred-service-and-preferred-date-time-include-the-salon-s-address-phone-number-and-business-hours-the-form-should-have-basic-client-side-validation-and-submit-data-to-the-backend",
+      "title": "Build a Booking/Contact section with a form that collects the client's name, email, phone number, preferred service, and preferred date/time. Include the salon's address, phone number, and business hours. The form should have basic client-side validation and submit data to the backend.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-sticky-navigation-bar-at-the-top-with-the-salon-logo-name-and-smooth-scroll-anchor-links-to-all-sections-services-pricing-gallery-contact-include-a-mobile-hamburger-menu-for-small-screens",
+      "title": "Add a sticky navigation bar at the top with the salon logo/name and smooth-scroll anchor links to all sections (Services, Pricing, Gallery, Contact). Include a mobile hamburger menu for small screens.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-footer-with-the-salon-name-a-short-tagline-social-media-icon-links-instagram-facebook-twitter-and-copyright-text",
+      "title": "Add a footer with the salon name, a short tagline, social media icon links (Instagram, Facebook, Twitter), and copyright text.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-generated-static-images-hero-background-gallery-photos-section-background-from-frontend-public-assets-generated-throughout-the-site",
+      "title": "Render the generated static images (hero background, gallery photos, section background) from frontend/public/assets/generated throughout the site.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-cinematic-animated-loading-screen-that-displays-the-salon-name-imagine-unisex-salon-with-a-luxury-animation-e-g-gold-shimmer-elegant-fade-in-text-and-then-smoothly-fades-out-before-revealing-the-main-site-it-should-appear-only-on-initial-page-load",
+      "title": "Implement a cinematic animated loading screen that displays the salon name 'Imagine Unisex Salon' with a luxury animation (e.g., gold shimmer, elegant fade-in text) and then smoothly fades out before revealing the main site. It should appear only on initial page load.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-static-hero-section-with-a-full-screen-automatic-image-slideshow-cycling-through-7-ultra-hd-luxury-salon-images-with-smooth-slide-and-fade-transitions-overlay-the-text-imagine-unisex-salon-and-luxury-beauty-grooming-experience-and-include-four-cta-buttons-book-appointment-scrolls-to-booking-form-call-now-tel-919030504422-whatsapp-chat-https-wa-me-919030504422-and-instagram-https-instagram-com-imagineunisexsalon",
+      "title": "Replace the current static hero section with a full-screen automatic image slideshow cycling through 7 ultra-HD luxury salon images with smooth slide and fade transitions. Overlay the text 'Imagine Unisex Salon' and 'Luxury Beauty & Grooming Experience' and include four CTA buttons: Book Appointment (scrolls to booking form), Call Now (tel:+919030504422), WhatsApp Chat (https://wa.me/919030504422), and Instagram (https://instagram.com/imagineunisexsalon).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-advanced-scroll-triggered-animations-site-wide-sections-entering-from-left-right-alternate-with-fade-in-and-subtle-zoom-in-effects-apply-a-parallax-scrolling-depth-effect-to-the-hero-and-at-least-one-section-background-image",
+      "title": "Add advanced scroll-triggered animations site-wide: sections entering from left/right alternate, with fade-in and subtle zoom-in effects. Apply a parallax scrolling depth effect to the hero and at least one section background image.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-upgrade-the-services-section-to-include-7-services-haircut-styling-hair-coloring-facial-skin-care-beard-grooming-bridal-makeup-hair-treatment-nail-services-each-displayed-as-a-premium-card-with-a-high-quality-service-image-icon-name-short-description-and-a-smooth-hover-animation-lift-gold-glow-border-effect",
+      "title": "Upgrade the Services section to include 7 services — Haircut & Styling, Hair Coloring, Facial & Skin Care, Beard Grooming, Bridal Makeup, Hair Treatment, Nail Services — each displayed as a premium card with a high-quality service image, icon, name, short description, and a smooth hover animation (lift + gold glow border effect).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-premium-portfolio-gallery-section-displaying-36-high-quality-salon-images-in-a-masonry-or-multi-column-grid-layout-clicking-any-image-opens-a-full-screen-lightbox-slideshow-with-navigation-arrows-close-button-and-smooth-open-close-animation",
+      "title": "Build a premium portfolio gallery section displaying 36+ high-quality salon images in a masonry or multi-column grid layout. Clicking any image opens a full-screen lightbox slideshow with navigation arrows, close button, and smooth open/close animation.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-instagram-style-gallery-section-with-a-3-column-grid-of-9-12-premium-salon-images-each-image-should-have-a-hover-overlay-with-a-heart-like-icon-and-the-instagram-logo-include-a-prominent-follow-on-instagram-button-that-links-to-https-instagram-com-imagineunisexsalon",
+      "title": "Add an Instagram-style gallery section with a 3-column grid of 9–12 premium salon images. Each image should have a hover overlay with a heart/like icon and the Instagram logo. Include a prominent 'Follow on Instagram' button that links to https://instagram.com/imagineunisexsalon.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-testimonials-section-with-an-auto-playing-sliding-carousel-displaying-at-least-6-client-reviews-each-testimonial-card-should-show-a-star-rating-5-stars-client-name-short-review-text-and-optionally-an-avatar-initials-include-prev-next-controls-and-dot-indicators",
+      "title": "Build a testimonials section with an auto-playing sliding carousel displaying at least 6 client reviews. Each testimonial card should show a star rating (5 stars), client name, short review text, and optionally an avatar/initials. Include prev/next controls and dot indicators.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-google-maps-section-that-embeds-the-salon-location-at-radhe-complex-kashipur-bypass-rd-adarsh-colony-rudrapur-uttarakhand-using-a-google-maps-iframe-embed-no-api-key-display-a-direction-button-that-opens-the-location-in-google-maps-include-the-salon-address-and-a-get-directions-cta-alongside-the-map",
+      "title": "Add a Google Maps section that embeds the salon location at 'Radhe Complex, Kashipur Bypass Rd, Adarsh Colony, Rudrapur, Uttarakhand' using a Google Maps iframe embed (no API key). Display a direction button that opens the location in Google Maps. Include the salon address and a 'Get Directions' CTA alongside the map.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-light-dark-mode-toggle-button-that-persists-the-user-s-preference-localstorage-in-dark-mode-the-entire-site-switches-to-a-deep-charcoal-black-luxury-dark-palette-with-gold-accents-in-light-mode-the-site-uses-cream-warm-white-with-charcoal-and-gold-accents",
+      "title": "Implement a Light/Dark mode toggle button that persists the user's preference (localStorage). In dark mode, the entire site switches to a deep charcoal/black luxury dark palette with gold accents. In light mode, the site uses cream/warm white with charcoal and gold accents.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-three-persistent-floating-action-buttons-anchored-to-the-bottom-right-corner-of-the-screen-always-visible-on-scroll-a-green-whatsapp-button-https-wa-me-919030504422-a-blue-charcoal-call-button-tel-919030504422-and-an-instagram-gradient-button-https-instagram-com-imagineunisexsalon-buttons-should-have-tooltip-labels-and-a-subtle-pulse-animation",
+      "title": "Add three persistent floating action buttons anchored to the bottom-right corner of the screen (always visible on scroll): a green WhatsApp button (https://wa.me/919030504422), a blue/charcoal Call button (tel:+919030504422), and an Instagram gradient button (https://instagram.com/imagineunisexsalon). Buttons should have tooltip labels and a subtle pulse animation.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-navigation-bar-and-footer-to-include-direct-links-icons-for-instagram-https-instagram-com-imagineunisexsalon-whatsapp-https-wa-me-919030504422-and-call-now-tel-919030504422-as-prominent-styled-buttons-or-icon-links-the-nav-bar-should-also-show-the-dark-mode-toggle",
+      "title": "Update the navigation bar and footer to include direct links/icons for Instagram (https://instagram.com/imagineunisexsalon), WhatsApp (https://wa.me/919030504422), and Call Now (tel:+919030504422) as prominent, styled buttons or icon links. The nav bar should also show the dark mode toggle.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-entire-website-is-fully-responsive-and-optimized-for-mobile-320px-tablet-768px-and-desktop-1280px-touch-interactions-swipe-carousels-tap-lightbox-must-work-correctly-typography-spacing-and-layout-must-adapt-gracefully-at-all-breakpoints-the-overall-visual-feel-must-match-an-ultra-premium-international-luxury-salon-brand-gold-accents-refined-typography-generous-whitespace-and-cinematic-imagery",
+      "title": "Ensure the entire website is fully responsive and optimized for mobile (320px+), tablet (768px+), and desktop (1280px+). Touch interactions (swipe carousels, tap lightbox) must work correctly. Typography, spacing, and layout must adapt gracefully at all breakpoints. The overall visual feel must match an ultra-premium international luxury salon brand — gold accents, refined typography, generous whitespace, and cinematic imagery.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-phone-number-references-throughout-the-entire-site-to-91-96904-17361-this-includes-the-call-now-button-tel-919690417361-all-whatsapp-links-https-wa-me-919690417361-the-booking-form-s-pre-filled-or-displayed-phone-info-the-header-contact-display-the-footer-contact-display-the-mapsection-contact-info-and-the-floating-call-and-whatsapp-action-buttons-in-floatingactionbuttons-tsx",
+      "title": "Update all phone number references throughout the entire site to +91 96904 17361. This includes: the Call Now button (tel:+919690417361), all WhatsApp links (https://wa.me/919690417361), the booking form's pre-filled or displayed phone info, the header contact display, the footer contact display, the MapSection contact info, and the floating Call and WhatsApp action buttons in FloatingActionButtons.tsx.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-instagram-links-throughout-the-site-to-https-www-instagram-com-imagine-unisexsalon-this-includes-the-navigation-bar-s-instagram-icon-link-the-footer-s-instagram-social-link-the-bookingcontact-contact-section-instagram-link-the-floating-instagram-action-button-in-floatingactionbuttons-tsx-and-the-instagramgallery-follow-on-instagram-button",
+      "title": "Update all Instagram links throughout the site to https://www.instagram.com/imagine_unisexsalon. This includes: the Navigation bar's Instagram icon link, the Footer's Instagram social link, the BookingContact / contact section Instagram link, the floating Instagram action button in FloatingActionButtons.tsx, and the InstagramGallery 'Follow on Instagram' button.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-services-section-frontend-src-components-services-tsx-to-display-exactly-these-7-services-in-this-order-haircut-beard-styling-hair-styling-facial-hair-coloring-keratin-treatment-makeup-remove-any-services-not-in-this-list-e-g-nail-services-bridal-makeup-as-a-separate-card-each-card-must-retain-the-premium-card-layout-with-an-image-icon-name-short-description-and-gold-glow-hover-animation",
+      "title": "Update the Services section (frontend/src/components/Services.tsx) to display exactly these 7 services in this order: Haircut, Beard Styling, Hair Styling, Facial, Hair Coloring, Keratin Treatment, Makeup. Remove any services not in this list (e.g., Nail Services, Bridal Makeup as a separate card). Each card must retain the premium card layout with an image, icon, name, short description, and gold glow hover animation.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-admin-dashboard-page-view-frontend-src-components-admindashboard-tsx-or-a-dedicated-route-modal-that-fetches-and-displays-all-submitted-bookings-from-the-backend-using-the-getallbookings-query-the-dashboard-should-show-each-booking-s-client-name-email-phone-preferred-service-preferred-date-time-and-submission-timestamp-in-a-clean-scannable-table-or-card-list-access-should-be-gated-show-the-dashboard-only-when-a-valid-admin-pin-or-after-clicking-a-hidden-admin-link-e-g-appending-admin-true-to-the-url-or-navigating-to-admin-style-it-to-match-the-ultra-premium-dark-gold-theme",
+      "title": "Build an Admin Dashboard page/view (frontend/src/components/AdminDashboard.tsx or a dedicated route/modal) that fetches and displays all submitted bookings from the backend using the getAllBookings query. The dashboard should show each booking's client name, email, phone, preferred service, preferred date/time, and submission timestamp in a clean, scannable table or card list. Access should be gated — show the dashboard only when a valid admin PIN or after clicking a hidden admin link (e.g., appending ?admin=true to the URL or navigating to /admin). Style it to match the ultra-premium dark/gold theme.",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-whatsapp-booking-integration-to-the-bookingcontact-form-after-a-successful-form-submission-stored-in-backend-present-the-user-with-a-whatsapp-cta-button-that-pre-fills-a-booking-message-using-the-submitted-details-and-opens-https-wa-me-919690417361-with-a-url-encoded-message-such-as-hi-i-d-like-to-book-service-on-date-time-name-name-phone-phone-the-button-should-be-visually-prominent-in-the-post-submission-confirmation-state",
+      "title": "Add WhatsApp booking integration to the BookingContact form. After a successful form submission (stored in backend), present the user with a WhatsApp CTA button that pre-fills a booking message using the submitted details and opens https://wa.me/919690417361 with a URL-encoded message such as 'Hi, I'd like to book: [Service] on [Date/Time]. Name: [Name], Phone: [Phone]'. The button should be visually prominent in the post-submission confirmation state.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-components-pricing-tsx-remove-all-price-values-from-every-service-item-this-includes-all-currency-symbols-e-g-numeric-amounts-e-g-85-110-145-and-any-from-or-starting-at-text-keep-only-service-category-headers-and-service-names-the-section-layout-and-styling-must-remain-fully-intact",
+      "title": "In frontend/src/components/Pricing.tsx, remove all price values from every service item — this includes all currency symbols (e.g. '$', '₹'), numeric amounts (e.g. $85, $110, $145), and any 'From $...' or 'Starting at $...' text. Keep only service category headers and service names. The section layout and styling must remain fully intact.",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-12",
+      "summary": "Store booking form submissions in the backend. Each submission should record: client name, email, phone, preferred service, preferred date/time, and a submission timestamp. Expose an update function to submit bookings and a query function to retrieve all bookings.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Cinematic animated loading screen with smooth luxury fade-out",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Full-screen automatic hero image slideshow with salon name, tagline, and CTA buttons (Book, Call, WhatsApp, Instagram)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Advanced scroll animations: sections slide from left/right, fade/zoom, parallax scrolling",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Premium portfolio gallery with 40+ HD images and lightbox slideshow on click",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Instagram-style gallery grid (6–12 images) with hover animations and Follow button linking to instagram.com/imagineunisexsalon",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Sliding testimonials carousel with client reviews",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Google Maps embed (no API key) showing Radhe Complex, Kashipur Bypass Rd, Rudrapur location",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Light/Dark mode toggle throughout the site",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Floating WhatsApp, Call, and Instagram buttons always visible on screen",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Instagram, WhatsApp, and Call Now buttons in header and footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Update phone number to +91 96904 17361 everywhere: Call button, WhatsApp links (wa.me/919690417361), booking form, header, footer, and floating buttons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Update Instagram link to https://www.instagram.com/imagine_unisexsalon in header, footer, contact section, and floating Instagram button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Update services section to exactly: Haircut, Beard Styling, Hair Styling, Facial, Hair Coloring, Keratin Treatment, Makeup",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Admin dashboard to securely view all submitted booking appointments",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-30",
+      "summary": "Update the backend (backend/main.mo) to store booking submissions with all required fields: client name, email, phone, preferred service, preferred date/time, and submission timestamp. Expose a submitBooking update function and a getAllBookings query function that returns all stored bookings. Ensure the data is stored in stable memory so it persists across upgrades.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-31",
+      "summary": "Remove all online payment features completely (payment buttons, payment forms, checkout flows, payment-related backend logic). Keep the Pricing section intact.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-32",
+      "summary": "Remove all online payment features from the frontend completely. This includes: any payment buttons (e.g., 'Pay Now', 'Checkout', 'Pay Online'), payment forms or checkout flows, payment method selectors (credit card, UPI, etc.), and any payment-related UI elements or modals. The Pricing section (frontend/src/components/Pricing.tsx) must remain fully intact — do not remove or alter it. All other sections (booking form, gallery, testimonials, admin dashboard, etc.) must remain untouched.",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-33",
+      "summary": "Remove all payment-related backend logic from backend/main.mo. This includes any payment processing functions, payment record storage, payment status queries, or payment-related data types. The booking submission and retrieval functions (submitBooking, getAllBookings) and all other existing backend logic must remain fully intact.",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-34",
+      "summary": "Remove all price amounts (dollar signs, numbers like $85/$110/$145, 'From $...' text) from the entire website. Keep only service names in the Pricing section — no monetary values displayed anywhere.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-36",
+      "summary": "Audit all other frontend components (Services.tsx, BookingContact.tsx, Hero.tsx, Footer.tsx, Navigation.tsx, MapSection.tsx, FloatingActionButtons.tsx, and any other component) for any remaining price amounts, dollar signs, or 'From $...' text and remove them. Only service names and descriptions should remain.",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Salon Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

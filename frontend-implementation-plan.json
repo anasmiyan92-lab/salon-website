@@ -1,0 +1,72 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Remove all price amounts from the website",
+  "requirements": [
+    {
+      "id": "REQ-30",
+      "summary": "Remove all price values from the Pricing component while preserving layout and structure",
+      "acceptanceCriteria": [
+        "No dollar signs ($), rupee symbols (₹), or any other currency symbols appear anywhere on the page.",
+        "No numeric price values (e.g. 85, 110, 145) appear in the Pricing section.",
+        "No 'From $...', 'Starting at $...', or any price-prefixed strings are rendered.",
+        "Service category headers (e.g. Haircuts, Color, Nails) remain visible.",
+        "Service names (e.g. Single Process Color, Partial Highlights, Full Highlights) remain visible.",
+        "The Pricing section layout (grid, cards, category headers, list structure) is visually unchanged apart from the removed price values."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Pricing.tsx",
+          "operation": "modify",
+          "description": "Remove all price values (dollar amounts, currency symbols, and 'From $...' text) from every service item in the pricing data structure. Strip out the price property and any associated rendering logic that displays monetary values. Keep service category headers and service names intact. Maintain all existing layout, grid structure, styling, and visual presentation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-31",
+      "summary": "Audit and remove any remaining price amounts from all other frontend components",
+      "acceptanceCriteria": [
+        "A full-page scan reveals zero instances of '$', '₹', or any price numeral tied to a service across all rendered components.",
+        "Services.tsx cards show only icon, service name, and description — no price figures.",
+        "No other section or component displays any monetary value."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Services.tsx",
+          "operation": "modify",
+          "description": "Audit the Services component for any price amounts, dollar signs, rupee symbols, or 'From $...' text in service descriptions or data. Remove any found instances while preserving service icons, names, and non-price descriptions. Maintain the existing card layout and styling."
+        },
+        {
+          "path": "frontend/src/components/BookingContact.tsx",
+          "operation": "modify",
+          "description": "Audit the BookingContact component for any price mentions in form labels, placeholder text, confirmation messages, or descriptive copy. Remove any found price references while keeping all booking form functionality and contact information intact."
+        },
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Audit the Hero component for any price amounts or promotional pricing text in headlines, taglines, or CTA button text. Remove any found instances while preserving all hero imagery, branding, and navigation functionality."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Audit the Footer component for any price mentions in branding text, promotional copy, or service descriptions. Remove any found instances while keeping all navigation links, contact details, and social media links intact."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Audit the Navigation component for any price-related promotional text or badge content. Remove any found instances while maintaining all navigation links and menu functionality."
+        },
+        {
+          "path": "frontend/src/components/MapSection.tsx",
+          "operation": "modify",
+          "description": "Audit the MapSection component for any price mentions in descriptive text or business information. Remove any found instances while keeping the embedded map, address, phone, and hours information intact."
+        },
+        {
+          "path": "frontend/src/components/FloatingActionButtons.tsx",
+          "operation": "modify",
+          "description": "Audit the FloatingActionButtons component for any price mentions in tooltips, labels, or pre-filled message content. Remove any found instances while maintaining all social media and contact button functionality."
+        }
+      ]
+    }
+  ]
+}

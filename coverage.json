@@ -1,0 +1,52 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-03-02T14:20:14.715Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-30",
+        "summary": "In frontend/src/components/Pricing.tsx, remove all price values from every service item — this includes all currency symbols (e.g. '$', '₹'), numeric amounts (e.g. $85, $110, $145), and any 'From $...' or 'Starting at $...' text. Keep only service category headers and service names. The section layout and styling must remain fully intact.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Pricing.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Pricing.tsx"
+        ]
+      },
+      {
+        "id": "REQ-31",
+        "summary": "Audit all other frontend components (Services.tsx, BookingContact.tsx, Hero.tsx, Footer.tsx, Navigation.tsx, MapSection.tsx, FloatingActionButtons.tsx, and any other component) for any remaining price amounts, dollar signs, or 'From $...' text and remove them. Only service names and descriptions should remain.",
+        "status": "missing",
+        "plannedFiles": [
+          "frontend/src/components/Services.tsx",
+          "frontend/src/components/BookingContact.tsx",
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/MapSection.tsx",
+          "frontend/src/components/FloatingActionButtons.tsx"
+        ],
+        "matchedFiles": []
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/Pricing.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
