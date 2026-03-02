@@ -1,33 +1,36 @@
-import { Scissors, Phone, MapPin, Heart } from 'lucide-react';
+import { Scissors, Phone, MapPin, Clock, Heart } from 'lucide-react';
 import { SiInstagram, SiWhatsapp, SiFacebook } from 'react-icons/si';
 
-const PHONE = '+91 96904 17361';
-const PHONE_TEL = 'tel:+919690417361';
-const WHATSAPP = 'https://wa.me/919690417361';
+const PHONE = '+91 9917417861';
+const PHONE_TEL = 'tel:+919917417861';
+const WHATSAPP = 'https://wa.me/919917417861';
 const INSTAGRAM = 'https://www.instagram.com/imagine_unisexsalon';
 const ADDRESS = 'Radhe Complex, Kashipur Bypass Rd, Rudrapur, Uttarakhand, India';
+const HOURS = 'Mon–Sat: 9:00 AM – 8:00 PM';
+const HOURS2 = 'Sun: 10:00 AM – 6:00 PM';
 
-const quickLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Book Now', href: '#booking' },
+const services = [
+  'Haircut & Styling',
+  'Beard Grooming',
+  'Hair Coloring',
+  'Keratin Treatment',
+  'Facial & Skincare',
+  'Bridal Makeup',
 ];
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const appId = encodeURIComponent(window.location.hostname || 'imagine-unisex-salon');
+  const appId = encodeURIComponent(typeof window !== 'undefined' ? window.location.hostname : 'imagine-unisex-salon');
 
-  const handleNavClick = (href: string) => {
-    const id = href.replace('#', '');
+  const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <footer className="bg-charcoal border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
@@ -40,46 +43,70 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-cream/50 text-sm leading-relaxed mb-5">
-              Premium hair &amp; beauty services for men and women in Rudrapur, Uttarakhand.
+              Premium hair &amp; beauty services for men and women. Experience luxury grooming in the heart of Rudrapur.
             </p>
             <div className="flex items-center gap-3">
               <a
                 href={INSTAGRAM}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center hover:bg-pink-500/20 hover:border-pink-500/40 transition-colors"
                 aria-label="Instagram"
+                className="w-9 h-9 rounded-full bg-gradient-to-br from-pink-500/20 to-purple-600/20 border border-pink-500/30 flex items-center justify-center hover:from-pink-500/30 hover:to-purple-600/30 transition-all"
               >
-                <SiInstagram className="w-4 h-4 text-gold hover:text-pink-400" />
+                <SiInstagram className="w-4 h-4 text-pink-400" />
               </a>
               <a
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center hover:bg-green-600/20 hover:border-green-600/40 transition-colors"
                 aria-label="WhatsApp"
+                className="w-9 h-9 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center hover:bg-green-500/20 transition-all"
               >
-                <SiWhatsapp className="w-4 h-4 text-gold" />
+                <SiWhatsapp className="w-4 h-4 text-green-400" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center hover:bg-blue-600/20 hover:border-blue-600/40 transition-colors"
                 aria-label="Facebook"
+                className="w-9 h-9 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center hover:bg-blue-500/20 transition-all"
               >
-                <SiFacebook className="w-4 h-4 text-gold" />
+                <SiFacebook className="w-4 h-4 text-blue-400" />
               </a>
             </div>
           </div>
 
+          {/* Services */}
+          <div>
+            <h4 className="font-serif text-base font-bold text-cream mb-4 tracking-wide">Our Services</h4>
+            <ul className="space-y-2">
+              {services.map((s) => (
+                <li key={s}>
+                  <button
+                    onClick={() => scrollTo('services')}
+                    className="text-cream/50 hover:text-gold text-sm transition-colors text-left"
+                  >
+                    {s}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-cream font-semibold mb-4 text-sm tracking-wide uppercase">Quick Links</h4>
-            <ul className="space-y-2.5">
-              {quickLinks.map((link) => (
+            <h4 className="font-serif text-base font-bold text-cream mb-4 tracking-wide">Quick Links</h4>
+            <ul className="space-y-2">
+              {[
+                { label: 'Home', id: 'home' },
+                { label: 'Services', id: 'services' },
+                { label: 'Pricing', id: 'pricing' },
+                { label: 'Gallery', id: 'gallery' },
+                { label: 'Book Appointment', id: 'booking' },
+                { label: 'Contact Us', id: 'booking' },
+              ].map((link) => (
                 <li key={link.label}>
                   <button
-                    onClick={() => handleNavClick(link.href)}
-                    className="text-cream/50 hover:text-gold text-sm transition-colors"
+                    onClick={() => scrollTo(link.id)}
+                    className="text-cream/50 hover:text-gold text-sm transition-colors text-left"
                   >
                     {link.label}
                   </button>
@@ -88,45 +115,43 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-serif text-cream font-semibold mb-4 text-sm tracking-wide uppercase">Services</h4>
-            <ul className="space-y-2.5">
-              {['Haircut', 'Beard Styling', 'Hair Styling', 'Facial', 'Hair Coloring', 'Keratin Treatment', 'Makeup'].map((s) => (
-                <li key={s}>
-                  <span className="text-cream/50 text-sm">{s}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-cream font-semibold mb-4 text-sm tracking-wide uppercase">Contact</h4>
+            <h4 className="font-serif text-base font-bold text-cream mb-4 tracking-wide">Contact Us</h4>
             <div className="space-y-3">
-              <a href={PHONE_TEL} className="flex items-start gap-2.5 group">
+              <a href={PHONE_TEL} className="flex items-start gap-3 group">
                 <Phone className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
-                <span className="text-cream/50 group-hover:text-gold text-sm transition-colors">{PHONE}</span>
+                <span className="text-cream/50 text-sm group-hover:text-gold transition-colors">{PHONE}</span>
               </a>
-              <div className="flex items-start gap-2.5">
+              <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
-                <span className="text-cream/50 text-sm leading-relaxed">{ADDRESS}</span>
+                <span className="text-cream/50 text-sm">{ADDRESS}</span>
               </div>
-              <a
-                href={INSTAGRAM}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-2.5 group"
-              >
-                <SiInstagram className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
-                <span className="text-cream/50 group-hover:text-gold text-sm transition-colors">@imagine_unisexsalon</span>
-              </a>
+              <div className="flex items-start gap-3">
+                <Clock className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-cream/50 text-sm">{HOURS}</p>
+                  <p className="text-cream/50 text-sm">{HOURS2}</p>
+                </div>
+              </div>
             </div>
+
+            <a
+              href={WHATSAPP}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 flex items-center gap-2 px-4 py-2.5 bg-green-600/20 border border-green-500/30 text-green-400 rounded-full text-sm font-medium hover:bg-green-600/30 transition-colors w-full justify-center"
+            >
+              <SiWhatsapp className="w-4 h-4" />
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
+      </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-gold/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+      {/* Bottom Bar */}
+      <div className="border-t border-gold/10 py-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-cream/30 text-xs">
             © {year} Imagine Unisex Salon. All rights reserved.
           </p>

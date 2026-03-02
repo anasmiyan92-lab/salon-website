@@ -4,9 +4,9 @@ import { SiWhatsapp, SiInstagram } from 'react-icons/si';
 import AnimatedSection from './AnimatedSection';
 import { useSubmitBooking } from '../hooks/useQueries';
 
-const PHONE = '+91 96904 17361';
-const PHONE_TEL = 'tel:+919690417361';
-const WHATSAPP_BASE = 'https://wa.me/919690417361';
+const PHONE = '+91 9917417861';
+const PHONE_TEL = 'tel:+919917417861';
+const WHATSAPP_BASE = 'https://wa.me/919917417861';
 const INSTAGRAM = 'https://www.instagram.com/imagine_unisexsalon';
 const ADDRESS = 'Radhe Complex, Kashipur Bypass Rd, Rudrapur, Uttarakhand, India';
 const HOURS = 'Mon–Sat: 9:00 AM – 8:00 PM | Sun: 10:00 AM – 6:00 PM';
@@ -132,14 +132,12 @@ export default function BookingContact() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <h3 className="font-serif text-xl font-bold text-cream mb-6">Your Details</h3>
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <h3 className="font-serif text-xl font-bold text-cream mb-1">Your Details</h3>
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-cream/70 text-xs font-medium mb-1.5 uppercase tracking-wide">
-                        Full Name *
-                      </label>
+                      <label className="block text-cream/60 text-xs font-medium mb-1.5 tracking-wide uppercase">Full Name *</label>
                       <input
                         type="text"
                         name="name"
@@ -151,26 +149,7 @@ export default function BookingContact() {
                       />
                     </div>
                     <div>
-                      <label className="block text-cream/70 text-xs font-medium mb-1.5 uppercase tracking-wide">
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={form.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="your@email.com"
-                        className="w-full bg-charcoal border border-gold/20 rounded-lg px-4 py-2.5 text-cream placeholder-cream/30 text-sm focus:outline-none focus:border-gold/60 transition-colors"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-cream/70 text-xs font-medium mb-1.5 uppercase tracking-wide">
-                        Phone *
-                      </label>
+                      <label className="block text-cream/60 text-xs font-medium mb-1.5 tracking-wide uppercase">Phone *</label>
                       <input
                         type="tel"
                         name="phone"
@@ -181,44 +160,50 @@ export default function BookingContact() {
                         className="w-full bg-charcoal border border-gold/20 rounded-lg px-4 py-2.5 text-cream placeholder-cream/30 text-sm focus:outline-none focus:border-gold/60 transition-colors"
                       />
                     </div>
-                    <div>
-                      <label className="block text-cream/70 text-xs font-medium mb-1.5 uppercase tracking-wide">
-                        Service *
-                      </label>
-                      <select
-                        name="service"
-                        value={form.service}
-                        onChange={handleChange}
-                        required
-                        className="w-full bg-charcoal border border-gold/20 rounded-lg px-4 py-2.5 text-cream text-sm focus:outline-none focus:border-gold/60 transition-colors"
-                      >
-                        <option value="" className="bg-charcoal">Select a service</option>
-                        {SERVICES.map((s) => (
-                          <option key={s} value={s} className="bg-charcoal">{s}</option>
-                        ))}
-                      </select>
-                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-cream/60 text-xs font-medium mb-1.5 tracking-wide uppercase">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="your@email.com"
+                      className="w-full bg-charcoal border border-gold/20 rounded-lg px-4 py-2.5 text-cream placeholder-cream/30 text-sm focus:outline-none focus:border-gold/60 transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-cream/60 text-xs font-medium mb-1.5 tracking-wide uppercase">Service *</label>
+                    <select
+                      name="service"
+                      value={form.service}
+                      onChange={handleChange}
+                      required
+                      className="w-full bg-charcoal border border-gold/20 rounded-lg px-4 py-2.5 text-cream text-sm focus:outline-none focus:border-gold/60 transition-colors appearance-none"
+                    >
+                      <option value="" className="bg-charcoal">Select a service</option>
+                      {SERVICES.map((s) => (
+                        <option key={s} value={s} className="bg-charcoal">{s}</option>
+                      ))}
+                    </select>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-cream/70 text-xs font-medium mb-1.5 uppercase tracking-wide">
-                        Preferred Date *
-                      </label>
+                      <label className="block text-cream/60 text-xs font-medium mb-1.5 tracking-wide uppercase">Preferred Date *</label>
                       <input
                         type="date"
                         name="date"
                         value={form.date}
                         onChange={handleChange}
                         required
-                        min={new Date().toISOString().split('T')[0]}
                         className="w-full bg-charcoal border border-gold/20 rounded-lg px-4 py-2.5 text-cream text-sm focus:outline-none focus:border-gold/60 transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block text-cream/70 text-xs font-medium mb-1.5 uppercase tracking-wide">
-                        Preferred Time *
-                      </label>
+                      <label className="block text-cream/60 text-xs font-medium mb-1.5 tracking-wide uppercase">Preferred Time *</label>
                       <input
                         type="time"
                         name="time"
@@ -230,26 +215,24 @@ export default function BookingContact() {
                     </div>
                   </div>
 
+                  {submitBooking.isError && (
+                    <p className="text-red-400 text-sm">Something went wrong. Please try again.</p>
+                  )}
+
                   <button
                     type="submit"
                     disabled={submitBooking.isPending}
-                    className="w-full py-3.5 bg-gold text-charcoal font-semibold rounded-full hover:bg-gold/90 transition-all duration-300 shadow-gold text-sm tracking-wide uppercase disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-2"
+                    className="w-full py-3.5 bg-gold text-charcoal font-semibold rounded-full hover:bg-gold/90 transition-all duration-300 shadow-gold text-sm tracking-wide uppercase disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {submitBooking.isPending ? (
                       <>
-                        <div className="w-4 h-4 border-2 border-charcoal/30 border-t-charcoal rounded-full animate-spin" />
-                        Booking...
+                        <span className="w-4 h-4 border-2 border-charcoal/30 border-t-charcoal rounded-full animate-spin" />
+                        Submitting...
                       </>
                     ) : (
-                      'Book Appointment'
+                      'Confirm Appointment'
                     )}
                   </button>
-
-                  {submitBooking.isError && (
-                    <p className="text-red-400 text-sm text-center mt-2">
-                      Something went wrong. Please try again.
-                    </p>
-                  )}
                 </form>
               )}
             </div>
@@ -258,76 +241,81 @@ export default function BookingContact() {
           {/* Contact Info */}
           <AnimatedSection direction="right">
             <div className="space-y-6">
-              <div>
-                <h3 className="font-serif text-2xl font-bold text-cream mb-6">Get In Touch</h3>
+              {/* Contact Details */}
+              <div className="bg-charcoal/60 border border-gold/20 rounded-2xl p-6">
+                <h3 className="font-serif text-xl font-bold text-cream mb-5">Get In Touch</h3>
                 <div className="space-y-4">
                   <a
                     href={PHONE_TEL}
-                    className="flex items-start gap-4 p-4 rounded-xl border border-gold/20 hover:border-gold/40 transition-colors group"
+                    className="flex items-start gap-4 group"
                   >
                     <div className="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 transition-colors">
                       <Phone className="w-4 h-4 text-gold" />
                     </div>
                     <div>
-                      <p className="text-cream/50 text-xs uppercase tracking-wide mb-0.5">Phone / Call</p>
-                      <p className="text-cream font-medium">{PHONE}</p>
+                      <p className="text-cream/50 text-xs uppercase tracking-wide mb-0.5">Phone / WhatsApp</p>
+                      <p className="text-cream font-medium text-sm group-hover:text-gold transition-colors">{PHONE}</p>
                     </div>
                   </a>
 
-                  <div className="flex items-start gap-4 p-4 rounded-xl border border-gold/20">
+                  <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-4 h-4 text-gold" />
                     </div>
                     <div>
                       <p className="text-cream/50 text-xs uppercase tracking-wide mb-0.5">Address</p>
-                      <p className="text-cream text-sm leading-relaxed">{ADDRESS}</p>
+                      <p className="text-cream font-medium text-sm">{ADDRESS}</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-4 rounded-xl border border-gold/20">
+                  <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center flex-shrink-0">
                       <Clock className="w-4 h-4 text-gold" />
                     </div>
                     <div>
                       <p className="text-cream/50 text-xs uppercase tracking-wide mb-0.5">Hours</p>
-                      <p className="text-cream text-sm">{HOURS}</p>
+                      <p className="text-cream font-medium text-sm">{HOURS}</p>
                     </div>
                   </div>
-
-                  <a
-                    href={INSTAGRAM}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start gap-4 p-4 rounded-xl border border-gold/20 hover:border-pink-500/40 transition-colors group"
-                  >
-                    <div className="w-10 h-10 rounded-full bg-pink-500/10 border border-pink-500/30 flex items-center justify-center flex-shrink-0 group-hover:bg-pink-500/20 transition-colors">
-                      <SiInstagram className="w-4 h-4 text-pink-400" />
-                    </div>
-                    <div>
-                      <p className="text-cream/50 text-xs uppercase tracking-wide mb-0.5">Instagram</p>
-                      <p className="text-cream text-sm">@imagine_unisexsalon</p>
-                    </div>
-                  </a>
                 </div>
               </div>
 
-              {/* Quick WhatsApp */}
-              <div className="p-5 rounded-xl bg-green-900/20 border border-green-600/30">
+              {/* Quick WhatsApp Booking */}
+              <div className="bg-green-900/20 border border-green-500/20 rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <SiWhatsapp className="w-5 h-5 text-green-400" />
-                  <h4 className="text-cream font-semibold">Quick WhatsApp Booking</h4>
+                  <MessageCircle className="w-5 h-5 text-green-400" />
+                  <h3 className="font-serif text-lg font-bold text-cream">Quick WhatsApp Booking</h3>
                 </div>
                 <p className="text-cream/60 text-sm mb-4">
-                  Prefer to book via WhatsApp? Message us directly for instant confirmation.
+                  Prefer to book via WhatsApp? Send us a message and we'll confirm your appointment instantly.
                 </p>
                 <a
                   href={`${WHATSAPP_BASE}?text=${encodeURIComponent("Hi! I'd like to book an appointment at Imagine Unisex Salon.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-full transition-colors text-sm"
+                  className="flex items-center gap-2 px-5 py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-full transition-colors duration-300 text-sm w-full justify-center"
                 >
-                  <MessageCircle className="w-4 h-4" />
-                  Chat on WhatsApp
+                  <SiWhatsapp className="w-4 h-4" />
+                  Book via WhatsApp
+                </a>
+              </div>
+
+              {/* Social */}
+              <div className="bg-charcoal/60 border border-gold/20 rounded-2xl p-6">
+                <h3 className="font-serif text-lg font-bold text-cream mb-4">Follow Us</h3>
+                <a
+                  href={INSTAGRAM}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 group"
+                >
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500/20 to-purple-600/20 border border-pink-500/30 flex items-center justify-center group-hover:from-pink-500/30 group-hover:to-purple-600/30 transition-all">
+                    <SiInstagram className="w-4 h-4 text-pink-400" />
+                  </div>
+                  <div>
+                    <p className="text-cream font-medium text-sm group-hover:text-gold transition-colors">@imagine_unisexsalon</p>
+                    <p className="text-cream/40 text-xs">Follow for latest styles & offers</p>
+                  </div>
                 </a>
               </div>
             </div>

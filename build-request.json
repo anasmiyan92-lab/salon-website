@@ -1,62 +1,49 @@
 {
   "kind": "build_request",
-  "title": "Remove all price amounts from the website",
+  "title": "Update phone number to +91 9917417861 across entire website",
   "projectName": "Imagine Unisex Salon",
-  "priority": "normal",
+  "priority": "high",
   "requirements": [
     {
-      "id": "REQ-30",
-      "text": "In frontend/src/components/Pricing.tsx, remove all price values from every service item — this includes all currency symbols (e.g. '$', '₹'), numeric amounts (e.g. $85, $110, $145), and any 'From $...' or 'Starting at $...' text. Keep only service category headers and service names. The section layout and styling must remain fully intact.",
+      "id": "REQ-32",
+      "text": "Update all phone number references across the entire frontend to +91 9917417861. Replace every occurrence of the old number (+91 96904 17361 / +919690417361) with the new number. Specifically update: (1) Navigation.tsx — phone display and any tel: link; (2) Hero.tsx — Call Now CTA button to tel:+919917417861 and WhatsApp CTA button to https://wa.me/919917417861; (3) FloatingActionButtons.tsx — Call button href to tel:+919917417861 and WhatsApp button href to https://wa.me/919917417861; (4) BookingContact.tsx — displayed phone info and the post-submission WhatsApp CTA link to https://wa.me/919917417861; (5) Footer.tsx — phone number display and any tel:/WhatsApp links; (6) MapSection.tsx — contact phone display. Ensure no trace of the old number remains anywhere in the codebase.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-recent-3",
+          "msg-recent-5"
         ],
         "quotes": [
-          "Please remove all price amounts from the website completely.",
-          "Remove: All dollar amounts ($85, $110, $145, etc.) Any price numbers from services Any \"From $...\" text",
-          "Keep only the service names, without showing any prices."
+          "update the phone number to +91 9917417861 everywhere on the website",
+          "Make sure the old number is completely removed and only the new number is used for Call, WhatsApp, Booking form, Contact section, and Footer",
+          "Also ensure WhatsApp chat opens correctly with this new number"
         ]
       },
       "acceptanceCriteria": [
-        "No dollar signs ($), rupee symbols (₹), or any other currency symbols appear anywhere on the page.",
-        "No numeric price values (e.g. 85, 110, 145) appear in the Pricing section.",
-        "No 'From $...', 'Starting at $...', or any price-prefixed strings are rendered.",
-        "Service category headers (e.g. Haircuts, Color, Nails) remain visible.",
-        "Service names (e.g. Single Process Color, Partial Highlights, Full Highlights) remain visible.",
-        "The Pricing section layout (grid, cards, category headers, list structure) is visually unchanged apart from the removed price values."
-      ]
-    },
-    {
-      "id": "REQ-31",
-      "text": "Audit all other frontend components (Services.tsx, BookingContact.tsx, Hero.tsx, Footer.tsx, Navigation.tsx, MapSection.tsx, FloatingActionButtons.tsx, and any other component) for any remaining price amounts, dollar signs, or 'From $...' text and remove them. Only service names and descriptions should remain.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "Remove: All dollar amounts ($85, $110, $145, etc.) Any price numbers from services Any \"From $...\" text",
-          "Keep only the service names, without showing any prices."
-        ]
-      },
-      "acceptanceCriteria": [
-        "A full-page scan reveals zero instances of '$', '₹', or any price numeral tied to a service across all rendered components.",
-        "Services.tsx cards show only icon, service name, and description — no price figures.",
-        "No other section or component displays any monetary value."
+        "Navigation bar displays +91 9917417861 and any tel: link uses tel:+919917417861",
+        "Hero section Call Now button uses tel:+919917417861",
+        "Hero section WhatsApp button uses https://wa.me/919917417861",
+        "FloatingActionButtons Call button href is tel:+919917417861",
+        "FloatingActionButtons WhatsApp button href is https://wa.me/919917417861",
+        "BookingContact section displays +91 9917417861 and post-submission WhatsApp CTA opens https://wa.me/919917417861",
+        "Footer displays +91 9917417861 and any WhatsApp/call link uses the new number",
+        "MapSection displays +91 9917417861",
+        "No instance of the old number (96904 17361 / 919690417361) exists anywhere in the frontend source files",
+        "Tapping the WhatsApp button opens a WhatsApp chat with the correct new number"
       ]
     }
   ],
   "constraints": [
-    "Do not remove or restructure the Pricing section itself — only strip monetary values from it.",
-    "Do not alter any section layout, card styling, or typography beyond removing price text.",
-    "Do not modify backend/main.mo.",
-    "Do not modify any file listed under frontend.immutablePaths."
+    "Do not change any Instagram links or other contact details",
+    "Do not modify any immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
+    "Do not alter backend logic, data models, or any existing backend functionality",
+    "Do not change any visual styling, layout, or component structure — only update phone number strings and href values"
   ],
   "nonGoals": [
-    "Adding any new pricing-related UI (e.g. 'Price on request' labels or 'Contact us for pricing' badges) unless it replaces a removed price inline — keep it clean with names only.",
-    "Changing the booking form, gallery, testimonials, admin dashboard, or any non-pricing section.",
-    "Any backend changes."
+    "Changing Instagram URLs",
+    "Modifying the backend schema or Motoko code",
+    "Altering the visual design or layout of any component",
+    "Adding new features or sections"
   ],
   "imageRequirements": {
     "required": [],

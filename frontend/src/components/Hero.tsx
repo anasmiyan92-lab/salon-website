@@ -3,7 +3,7 @@ import { ChevronDown, Sparkles } from 'lucide-react';
 import { SiWhatsapp, SiInstagram } from 'react-icons/si';
 import AnimatedSection from './AnimatedSection';
 
-const WHATSAPP = 'https://wa.me/919690417361';
+const WHATSAPP = 'https://wa.me/919917417861';
 const INSTAGRAM = 'https://www.instagram.com/imagine_unisexsalon';
 
 const slides = [

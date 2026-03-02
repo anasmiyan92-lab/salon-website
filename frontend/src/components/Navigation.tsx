@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Scissors } from 'lucide-react';
 import { SiInstagram } from 'react-icons/si';
 
-const PHONE = '+91 96904 17361';
-const PHONE_TEL = 'tel:+919690417361';
+const PHONE = '+91 9917417861';
+const PHONE_TEL = 'tel:+919917417861';
 const INSTAGRAM = 'https://www.instagram.com/imagine_unisexsalon';
 
 const navLinks = [

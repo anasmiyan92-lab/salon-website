@@ -1,70 +1,53 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove all price amounts from the website",
+  "title": "Update phone number to +91 9917417861 across entire website",
   "requirements": [
     {
-      "id": "REQ-30",
-      "summary": "Remove all price values from the Pricing component while preserving layout and structure",
+      "id": "REQ-32",
+      "summary": "Replace all occurrences of the old phone number (+91 96904 17361 / +919690417361) with the new number (+91 9917417861) across all frontend components, ensuring tel: links and WhatsApp URLs are updated correctly",
       "acceptanceCriteria": [
-        "No dollar signs ($), rupee symbols (₹), or any other currency symbols appear anywhere on the page.",
-        "No numeric price values (e.g. 85, 110, 145) appear in the Pricing section.",
-        "No 'From $...', 'Starting at $...', or any price-prefixed strings are rendered.",
-        "Service category headers (e.g. Haircuts, Color, Nails) remain visible.",
-        "Service names (e.g. Single Process Color, Partial Highlights, Full Highlights) remain visible.",
-        "The Pricing section layout (grid, cards, category headers, list structure) is visually unchanged apart from the removed price values."
+        "Navigation bar displays +91 9917417861 and any tel: link uses tel:+919917417861",
+        "Hero section Call Now button uses tel:+919917417861",
+        "Hero section WhatsApp button uses https://wa.me/919917417861",
+        "FloatingActionButtons Call button href is tel:+919917417861",
+        "FloatingActionButtons WhatsApp button href is https://wa.me/919917417861",
+        "BookingContact section displays +91 9917417861 and post-submission WhatsApp CTA opens https://wa.me/919917417861",
+        "Footer displays +91 9917417861 and any WhatsApp/call link uses the new number",
+        "MapSection displays +91 9917417861",
+        "No instance of the old number (96904 17361 / 919690417361) exists anywhere in the frontend source files",
+        "Tapping the WhatsApp button opens a WhatsApp chat with the correct new number"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Pricing.tsx",
+          "path": "frontend/src/components/Navigation.tsx",
           "operation": "modify",
-          "description": "Remove all price values (dollar amounts, currency symbols, and 'From $...' text) from every service item in the pricing data structure. Strip out the price property and any associated rendering logic that displays monetary values. Keep service category headers and service names intact. Maintain all existing layout, grid structure, styling, and visual presentation."
-        }
-      ]
-    },
-    {
-      "id": "REQ-31",
-      "summary": "Audit and remove any remaining price amounts from all other frontend components",
-      "acceptanceCriteria": [
-        "A full-page scan reveals zero instances of '$', '₹', or any price numeral tied to a service across all rendered components.",
-        "Services.tsx cards show only icon, service name, and description — no price figures.",
-        "No other section or component displays any monetary value."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Services.tsx",
-          "operation": "modify",
-          "description": "Audit the Services component for any price amounts, dollar signs, rupee symbols, or 'From $...' text in service descriptions or data. Remove any found instances while preserving service icons, names, and non-price descriptions. Maintain the existing card layout and styling."
-        },
-        {
-          "path": "frontend/src/components/BookingContact.tsx",
-          "operation": "modify",
-          "description": "Audit the BookingContact component for any price mentions in form labels, placeholder text, confirmation messages, or descriptive copy. Remove any found price references while keeping all booking form functionality and contact information intact."
+          "description": "Update the phone number display from +91 96904 17361 to +91 9917417861 and ensure any tel: link uses tel:+919917417861"
         },
         {
           "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Audit the Hero component for any price amounts or promotional pricing text in headlines, taglines, or CTA button text. Remove any found instances while preserving all hero imagery, branding, and navigation functionality."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Audit the Footer component for any price mentions in branding text, promotional copy, or service descriptions. Remove any found instances while keeping all navigation links, contact details, and social media links intact."
-        },
-        {
-          "path": "frontend/src/components/Navigation.tsx",
-          "operation": "modify",
-          "description": "Audit the Navigation component for any price-related promotional text or badge content. Remove any found instances while maintaining all navigation links and menu functionality."
-        },
-        {
-          "path": "frontend/src/components/MapSection.tsx",
-          "operation": "modify",
-          "description": "Audit the MapSection component for any price mentions in descriptive text or business information. Remove any found instances while keeping the embedded map, address, phone, and hours information intact."
+          "description": "Update the Call Now CTA button href from tel:+919690417361 to tel:+919917417861 and the WhatsApp CTA button href from https://wa.me/919690417361 to https://wa.me/919917417861"
         },
         {
           "path": "frontend/src/components/FloatingActionButtons.tsx",
           "operation": "modify",
-          "description": "Audit the FloatingActionButtons component for any price mentions in tooltips, labels, or pre-filled message content. Remove any found instances while maintaining all social media and contact button functionality."
+          "description": "Update the Call button href from tel:+919690417361 to tel:+919917417861 and the WhatsApp button href from https://wa.me/919690417361 to https://wa.me/919917417861"
+        },
+        {
+          "path": "frontend/src/components/BookingContact.tsx",
+          "operation": "modify",
+          "description": "Update the displayed phone number from +91 96904 17361 to +91 9917417861 and update the post-submission WhatsApp CTA link from https://wa.me/919690417361 to https://wa.me/919917417861"
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the phone number display from +91 96904 17361 to +91 9917417861 and ensure any tel: or WhatsApp links use the new number (tel:+919917417861 and https://wa.me/919917417861)"
+        },
+        {
+          "path": "frontend/src/components/MapSection.tsx",
+          "operation": "modify",
+          "description": "Update the contact phone number display from +91 96904 17361 to +91 9917417861"
         }
       ]
     }

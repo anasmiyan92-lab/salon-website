@@ -7,6 +7,9 @@ const MAPS_EMBED_URL =
 const MAPS_LINK =
   'https://www.google.com/maps/search/?api=1&query=Radhe+Complex+Kashipur+Bypass+Rd+Adarsh+Colony+Rudrapur+Uttarakhand';
 
+const PHONE = '+91 9917417861';
+const PHONE_TEL = 'tel:+919917417861';
+
 export default function MapSection() {
   return (
     <section id="location" className="py-24 lg:py-32 bg-cream-dark dark:bg-charcoal-light">
@@ -54,10 +57,10 @@ export default function MapSection() {
                   <div>
                     <p className="font-sans text-muted-foreground text-xs tracking-widest uppercase mb-1">Phone</p>
                     <a
-                      href="tel:+919030504422"
+                      href={PHONE_TEL}
                       className="font-sans text-foreground text-sm hover:text-gold transition-colors"
                     >
-                      +91 90305 04422
+                      {PHONE}
                     </a>
                   </div>
                 </div>

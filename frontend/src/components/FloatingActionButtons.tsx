@@ -1,8 +1,8 @@
 import { Phone } from 'lucide-react';
 import { SiWhatsapp, SiInstagram } from 'react-icons/si';
 
-const WHATSAPP = 'https://wa.me/919690417361';
-const PHONE_TEL = 'tel:+919690417361';
+const WHATSAPP = 'https://wa.me/919917417861';
+const PHONE_TEL = 'tel:+919917417861';
 const INSTAGRAM = 'https://www.instagram.com/imagine_unisexsalon';
 
 export default function FloatingActionButtons() {

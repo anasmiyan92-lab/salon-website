@@ -1,40 +1,35 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-03-02T14:20:14.715Z",
+  "generatedAt": "2026-03-02T16:21:45.503Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
+    "total": 1,
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-30",
-        "summary": "In frontend/src/components/Pricing.tsx, remove all price values from every service item — this includes all currency symbols (e.g. '$', '₹'), numeric amounts (e.g. $85, $110, $145), and any 'From $...' or 'Starting at $...' text. Keep only service category headers and service names. The section layout and styling must remain fully intact.",
+        "id": "REQ-32",
+        "summary": "Update all phone number references across the entire frontend to +91 9917417861. Replace every occurrence of the old number (+91 96904 17361 / +919690417361) with the new number. Specifically update: (1) Navigation.tsx — phone display and any tel: link; (2) Hero.tsx — Call Now CTA button to tel:+919917417861 and WhatsApp CTA button to https://wa.me/919917417861; (3) FloatingActionButtons.tsx — Call button href to tel:+919917417861 and WhatsApp button href to https://wa.me/919917417861; (4) BookingContact.tsx — displayed phone info and the post-submission WhatsApp CTA link to https://wa.me/919917417861; (5) Footer.tsx — phone number display and any tel:/WhatsApp links; (6) MapSection.tsx — contact phone display. Ensure no trace of the old number remains anywhere in the codebase.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Pricing.tsx"
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/components/FloatingActionButtons.tsx",
+          "frontend/src/components/BookingContact.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/MapSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/Pricing.tsx"
-        ]
-      },
-      {
-        "id": "REQ-31",
-        "summary": "Audit all other frontend components (Services.tsx, BookingContact.tsx, Hero.tsx, Footer.tsx, Navigation.tsx, MapSection.tsx, FloatingActionButtons.tsx, and any other component) for any remaining price amounts, dollar signs, or 'From $...' text and remove them. Only service names and descriptions should remain.",
-        "status": "missing",
-        "plannedFiles": [
-          "frontend/src/components/Services.tsx",
-          "frontend/src/components/BookingContact.tsx",
-          "frontend/src/components/Hero.tsx",
-          "frontend/src/components/Footer.tsx",
           "frontend/src/components/Navigation.tsx",
-          "frontend/src/components/MapSection.tsx",
-          "frontend/src/components/FloatingActionButtons.tsx"
-        ],
-        "matchedFiles": []
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/components/FloatingActionButtons.tsx",
+          "frontend/src/components/BookingContact.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/MapSection.tsx"
+        ]
       }
     ]
   },
@@ -43,7 +38,12 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/Pricing.tsx",
+    "frontend/src/components/BookingContact.tsx",
+    "frontend/src/components/FloatingActionButtons.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Hero.tsx",
+    "frontend/src/components/MapSection.tsx",
+    "frontend/src/components/Navigation.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 11,
-  "summary": "Ultra-premium luxury salon website for Imagine Unisex Salon (Rudrapur, Uttarakhand). Features cinematic loading screen, full-screen hero slideshow, services section (Haircut, Beard Styling, Hair Styling, Facial, Hair Coloring, Keratin Treatment, Makeup), premium portfolio gallery with lightbox, Instagram-style gallery grid, testimonials carousel, booking form with backend storage, admin dashboard for booking management, Google Maps embed, dark/light mode toggle, scroll animations, floating contact buttons (WhatsApp/Call/Instagram), and responsive design. Pricing section shows service names only — no prices displayed (salon provides pricing in person). Contact: +91 96904 17361, Instagram: instagram.com/imagine_unisexsalon.",
+  "projectStateVersion": 13,
+  "summary": "Ultra-premium luxury salon website for Imagine Unisex Salon (Rudrapur, Uttarakhand). Features cinematic loading screen, full-screen hero slideshow, services section (Haircut, Beard Styling, Hair Styling, Facial, Hair Coloring, Keratin Treatment, Makeup), premium portfolio gallery with lightbox, Instagram-style gallery grid, testimonials carousel, booking form with backend storage, admin dashboard for booking management, Google Maps embed, dark/light mode toggle, scroll animations, floating contact buttons (WhatsApp/Call/Instagram), and responsive design. Pricing section shows service names only — no prices displayed (salon provides pricing in person). Contact: +91 9917417861, Instagram: instagram.com/imagine_unisexsalon.",
   "architectural_notes": [
     "Styled with Tailwind CSS for a clean, modern look",
     "Google Maps embedded via iframe (no API key); links open exact salon location in Google Maps",
     "No before/after slider section per user request",
-    "Phone/WhatsApp: +91 96904 17361 (wa.me/919690417361) — updated from original number",
     "Instagram: https://www.instagram.com/imagine_unisexsalon (updated handle)",
     "No online payment features; Pricing section (service price list) is retained but all payment/checkout flows are removed",
-    "Pricing section shows service names only — all price amounts removed; salon provides pricing in person"
+    "Pricing section shows service names only — all price amounts removed; salon provides pricing in person",
+    "Phone/WhatsApp updated to +91 9917417861 (wa.me/919917417861) — old number +91 96904 17361 fully removed"
   ],
   "known_issues": [],
   "isFixRequest": false,
@@ -221,6 +221,14 @@
         "REQ-30"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-all-phone-number-references-across-the-entire-frontend-to-91-9917417861-replace-every-occurrence-of-the-old-number-91-96904-17361-919690417361-with-the-new-number-specifically-update-1-navigation-tsx-phone-display-and-any-tel-link-2-hero-tsx-call-now-cta-button-to-tel-919917417861-and-whatsapp-cta-button-to-https-wa-me-919917417861-3-floatingactionbuttons-tsx-call-button-href-to-tel-919917417861-and-whatsapp-button-href-to-https-wa-me-919917417861-4-bookingcontact-tsx-displayed-phone-info-and-the-post-submission-whatsapp-cta-link-to-https-wa-me-919917417861-5-footer-tsx-phone-number-display-and-any-tel-whatsapp-links-6-mapsection-tsx-contact-phone-display-ensure-no-trace-of-the-old-number-remains-anywhere-in-the-codebase",
+      "title": "Update all phone number references across the entire frontend to +91 9917417861. Replace every occurrence of the old number (+91 96904 17361 / +919690417361) with the new number. Specifically update: (1) Navigation.tsx — phone display and any tel: link; (2) Hero.tsx — Call Now CTA button to tel:+919917417861 and WhatsApp CTA button to https://wa.me/919917417861; (3) FloatingActionButtons.tsx — Call button href to tel:+919917417861 and WhatsApp button href to https://wa.me/919917417861; (4) BookingContact.tsx — displayed phone info and the post-submission WhatsApp CTA link to https://wa.me/919917417861; (5) Footer.tsx — phone number display and any tel:/WhatsApp links; (6) MapSection.tsx — contact phone display. Ensure no trace of the old number remains anywhere in the codebase.",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -358,6 +366,12 @@
       "reqIds": [
         "REQ-31"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-37",
+      "summary": "Update phone number to +91 9917417861 (wa.me/919917417861) everywhere: Header, Hero CTA Call/WhatsApp buttons, floating Call/WhatsApp buttons, Booking/Contact section, Footer, and Map/Contact section. Remove old number +91 96904 17361 completely.",
+      "reqIds": [],
       "status": "pending"
     }
   ],
